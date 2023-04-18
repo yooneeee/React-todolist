@@ -15,10 +15,6 @@ React, Javascript, HTML, CSS, Git, Github
 4. Layout의 최대 넓이는 1200px, 최소 넓이는 800px로 제한하고, 전체 화면의 가운데로 정렬해주세요.
 5. 컴포넌트 구조는 자유롭게 구현해보세요.
     
-### 구현 화면
-![React_App_-_Chrome_2023-04-18_09-40-56_AdobeExpress](https://user-images.githubusercontent.com/128367773/232649745-bae7c159-c91a-4721-9103-712b939efe9b.gif)
-
-
 ### 컴포넌트 구조
 ![image](https://user-images.githubusercontent.com/128367773/232642145-6d4df64a-b603-4b2c-9677-5e8fe41f6ae3.png)
 ① Header: 페이지의 헤더부분으로 고정된 값
