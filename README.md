@@ -16,12 +16,15 @@ React, Javascript, HTML, CSS, Git, Github
 5. 컴포넌트 구조는 자유롭게 구현해보세요.
     
 ### 구현 화면
-![React_App_-_Chrome_2023-04-18_09-40-56_AdobeExpress (1)](https://user-images.githubusercontent.com/128367773/232642235-12e702f9-621d-4bde-8651-1abedacbaaec.gif)
+![React_App_-_Chrome_2023-04-18_09-40-56_AdobeExpress](https://user-images.githubusercontent.com/128367773/232649745-bae7c159-c91a-4721-9103-712b939efe9b.gif)
+
 
 ### 컴포넌트 구조
 ![image](https://user-images.githubusercontent.com/128367773/232642145-6d4df64a-b603-4b2c-9677-5e8fe41f6ae3.png)
 ① Header: 페이지의 헤더부분으로 고정된 값
+
 ② Input: 새로운 TodoList 추가하는 부분, 추가 데이터만 전달
+
 ③ TodoList: TodoList가 보여지는 부분
 
 ### Todo 추가
@@ -35,4 +38,3 @@ TodoList 추가시 지정했던 고유 id값(uuid사용)을 비교하여 삭제 
 ### Todo 상태변경
 
 완료, 취소 버튼에 각 TodoList의 고유 id값을 인수로 넘겨주어 id값을 비교하여, 해당 TodoList의 isDone값을 이용하여 완료 버튼 클릭 시, Done칸으로 이동하고, 취소 버튼 클릭 시, Working칸으로 이동하도록 구현
-
