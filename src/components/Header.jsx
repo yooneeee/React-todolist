@@ -2,10 +2,10 @@ import React from "react";
 import "./Header.css";
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <div>My Todo List</div>
       <div>React</div>
-    </div>
+    </header>
   );
 }
 export default Header;

@@ -1,12 +1,10 @@
 import React from "react";
 import "./TodoList.css";
-function TodoList({ todos, isDone, setTodos }) {
+function TodoList({ todos, setTodos }) {
   const deleteClick = (id) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
-    //setTodos(...todos.filter((item) => item.id !== todos.id));
   };
-
   const stateChangeClick = (id) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -20,22 +18,6 @@ function TodoList({ todos, isDone, setTodos }) {
     });
     setTodos(newTodos);
   };
-  /*const todos_index = todos.findIndex((todo) => todo.id === id);
-
-    isDone
-      ? (todos[todos_index].isDone = true)
-      : (todos[todos_index].isDone = false);
-    setTodos(...todos);
-
-     setTodos((todos) =>
-      todos.map((item) => {
-        if (item.id === todos.id) {
-          return { ...todos, isDone: !todos.isDone };
-        } else {
-          return todos;
-        }
-      })
-    ); */
 
   return (
     <div>
@@ -45,13 +27,14 @@ function TodoList({ todos, isDone, setTodos }) {
           {todos.map((todo) => {
             if (!todo.isDone) {
               return (
-                <div className="list">
+                <div className="list" key={todo.id}>
                   <h3 className="title">{todo.title}</h3>
                   <h5 className="content">{todo.contents}</h5>
                   <div className="btn">
                     <button
                       className="delete_btn"
-                      onClick={() => deleteClick(todo.id)}
+                      onClick={() => deleteClick(todo.id)} //인자 넘겨줄 경우 ()=>를 함수 명 앞에 붙여줘야함
+                      // 안그러면 함수 바로 실행돼서 오류남
                     >
                       삭제하기
                     </button>
@@ -106,19 +89,3 @@ function TodoList({ todos, isDone, setTodos }) {
 }
 
 export default TodoList;
-
-/* <h3>{isDone === true ? "Done..!🎉" : "Working..🔥"}</h3>
-      {todos
-        .filter((todo) => todo.isDone === false)
-        .map((todo) => {
-          return (
-            <div style={{ border: "1px solid green" }} key={todo.id}>
-              <h3>{todo.title}</h3>
-              <h5>{todo.contents}</h5>
-              <button onClick={() => deleteClick(todo.id)}>삭제하기</button>
-              <button onClick={stateChangeClick}>
-                {isDone ? "취소" : "완료"}
-              </button>
-            </div>
-          );
-        })} */
